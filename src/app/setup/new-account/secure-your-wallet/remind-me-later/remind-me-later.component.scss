@@ -1,0 +1,43 @@
+ion-item {
+    --background: var(--background-modal-card-content);
+}
+
+ion-checkbox {
+    --background: var(--color-content);
+    --border-color: #A6A0BB;
+    --border-width: 1.5px;
+    --background-checked: #A869ED;
+    --border-color-checked: #A869ED;
+    margin-top: 0px;
+}
+
+.title {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.consent {
+    font-family: 'Poppins-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.continue {
+    --background: var(--background-item);
+}
+
+ion-button {
+    width: 40%;
+}

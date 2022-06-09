@@ -1,0 +1,68 @@
+<div *ngIf="!done">
+
+  <div class="ion-padding ion-margin selection-word-container">
+    <span class="ion-margin-bottom container-text">{{ 'new-wallet.selectEachWord' | translate }}</span>
+
+    <ion-row class="ion-justify-content-between ion-margin-bottom">
+
+      <div class="word-container"
+        *ngFor="let item of unsortedWords.slice(0,3)">
+        <span class="word-container-text word-container-text-number">{{item.pos+1}}.</span><span
+          class="word-container-text"> {{selectedWords[item.pos]}}</span>
+      </div>
+    </ion-row>
+  </div>
+  <br>
+  <br>
+
+  <ion-row class="ion-justify-content-center">
+
+    <ion-row class="ion-justify-content-between ion-margin-bottom">
+
+      <div class="word-select-container"
+        *ngFor="let item of selectionWords.slice(0,3)"
+        (click)="selectWord(item)">
+        <span class="word-select-text"
+          [ngClass]="{'word-select-text-disabled': isWordSelected(item)}">{{ item }}</span>
+      </div>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-between">
+
+      <div class="word-select-container"
+        *ngFor="let item of selectionWords.slice(3,5)"
+        (click)="selectWord(item)">
+        <span class="word-select-text"
+          [ngClass]="{'word-select-text-disabled': isWordSelected(item)}">{{ item }}</span>
+      </div>
+    </ion-row>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center button-container">
+    <ion-button [disabled]="!enableNextButton"
+      expand="block"
+      shape="round"
+      class="btn-base ion-margin-top color-gradient-button"
+      (click)="next()">
+      {{'new-wallet.next' | translate}}
+    </ion-button>
+  </ion-row>
+</div>
+
+<div *ngIf="done" class="congrats-parent-container">
+  <img src="/assets/images/check-select.svg" class="ion-margin-bottom">
+  <ion-row class="ion-justify-content-center congrats-container ion-margin-top">
+    <span class="congrats-title ion-margin-bottom">{{'new-wallet.congratulations' | translate}}</span>
+    <span class="congrats-text ion-margin-bottom">{{'new-wallet.congratulationsText1' | translate}}</span>
+    <span class="congrats-text">{{'new-wallet.congratulationsText2' | translate}}</span>
+  </ion-row>
+  <ion-row class="ion-justify-content-center button-container">
+    <ion-button
+      expand="block"
+      shape="round"
+      class="btn-base ion-margin-top color-gradient-button"
+      (click)="finish()">
+      {{'new-wallet.done' | translate}}
+    </ion-button>
+  </ion-row>
+</div>

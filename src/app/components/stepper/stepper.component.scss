@@ -1,0 +1,78 @@
+@import "./variables";
+
+  .#{$stepper-prefix}-horizontal-container,
+  .#{$stepper-prefix}-vertical-container {
+    display: block;
+  }
+
+  .#{$stepper-prefix}-horizontal-header-container {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+
+  .#{$stepper-prefix}-vertical-content-container {
+    margin-left: 36px;
+    position: relative;
+  }
+
+  .#{$stepper-prefix}-vertical-content {
+    overflow: hidden;
+  }
+
+  .ionic-vertical-content {
+    // padding: 0 24px 24px 24px;
+  }
+
+  .#{$stepper-prefix}-vertical-line::before {
+    // content: '';
+    // position: absolute;
+    // top: -16px;
+    // bottom: -16px;
+    // left: 0;
+    // border-left-width: 1px;
+    // border-left-style: solid;
+    // border-left-color: $step-line-color;
+  }
+
+  .#{$stepper-prefix}-horizontal-line{
+    flex: auto;
+    height: 4px;
+    margin: 0 -16px;
+    min-width: 10px;
+    background: #2F2A3C;
+    z-index: -1;
+    &-active {
+        background: var(--color-gradient);
+    }
+  }
+
+app-step-header {
+display: flex;
+  height: 72px;
+  overflow: hidden;
+  align-items: center;
+  &:first-of-type {
+    padding-left: 22px;
+  }
+  &:last-of-type {
+    padding-right: 22px;
+  }
+
+}
+
+.stepper-counter {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+ion-back-button{
+    --icon-font-size: 22px;
+    --color: #ffffff;
+}

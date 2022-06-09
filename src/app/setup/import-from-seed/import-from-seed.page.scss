@@ -1,0 +1,104 @@
+.custom-item-input {
+    --border-radius: 8px;
+    --background: var(--background-item);
+    --min-height: 64px;
+    --inner-padding-end: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    ion-label {
+        font-family: 'Poppins-Medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #A6A0BB;
+        margin-top: -9px;
+    }
+    ion-icon {
+        color: #ffffff
+    }
+
+    .label-input {
+        width: 100%;
+    }
+
+    &.item-has-value, &.item-has-focus {
+        ion-label {
+            margin-top: 8px;
+        }
+    }
+
+    ion-textarea, ion-input {
+        margin-top: -14px;
+        font-family: 'Password';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #FFFFFF;
+        --padding-end: 0px;
+    }
+
+    .error {
+        font-family: 'Poppins-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #A6A0BB;
+    }
+
+    .showPassPhrase, .showNewPassword, .showConfirmPassword {
+        font-family: 'Poppins-Medium';
+    }
+}
+
+.sign-in-faceid-text {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.sign-in-faceid-container {
+    --background: var(--background-modal-card-content);
+}
+
+ion-toggle {
+    --handle-width: 10px;
+    --handle-height: 24px;
+    --background: var(--background-item);
+    --background-checked: var(--color-gradient);
+    width: 64px;
+    padding-right: 10px;
+    &::part(track) {
+        width: 95%;
+        padding-right: 6px;
+        padding-left: 8px; 
+    }
+}
+
+.terms-conditions {
+    font-family: 'Poppins-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #A6A0BB;
+    &-blue {
+        color: #0B6FFB;
+    }
+}
+
+.button-container {
+    position: absolute;
+    bottom: 40px;
+    left: 15%;
+}

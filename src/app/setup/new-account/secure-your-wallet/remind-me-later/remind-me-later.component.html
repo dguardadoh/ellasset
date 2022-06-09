@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-row class="ion-justify-content-center ion-padding">
+    <span class="title">{{'remind-me-later.skipAccountSecurity' | translate}}</span>
+  </ion-row>
+  <ion-item lines="none" button (click)="$event.stopImmediatePropagation()" class="ion-margin-vertical">
+    <ion-checkbox slot="start" mode="md"></ion-checkbox>
+    <p class="consent" >{{'remind-me-later.consent' | translate}}</p>
+  </ion-item>
+  <br>
+  <ion-row class="ion-justify-content-evenly ion-margin-top">
+    <ion-button (click)="continue()" expand="block" shape="round" class="btn-base color-gradient-text continue" >
+      <span class="color-gradient-text btn-base-text">{{'remind-me-later.secureNow' | translate }}</span>
+    </ion-button>
+    <ion-button (click)="goToHome()" expand="block" shape="round" class="btn-base color-gradient-button" >
+      {{'remind-me-later.skip' | translate }}
+    </ion-button>
+  </ion-row>
+</ion-content>

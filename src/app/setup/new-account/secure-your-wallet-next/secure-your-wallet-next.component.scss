@@ -1,0 +1,109 @@
+.title {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    width: 96%;
+    justify-content: center;
+}
+
+.subtitle {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #A6A0BB;
+}
+
+ion-back-button{
+    --icon-font-size: 22px;
+    --color: #ffffff;
+}
+
+.important {
+    font-family: 'Poppins-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #0B6FFB;
+}
+
+ion-icon {
+    font-size: 21px;
+    color: #ffffff;
+    margin-right: 4px;
+}
+
+.row-title-left {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    display: contents;
+}
+
+.row-title-right{
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.green {
+    color: #6CDA9C;
+}
+
+.full-w {
+    width: 100%;
+}
+
+.container {
+    background: var(--background-item);
+    border-radius: 8px;
+}
+
+.regular-text {
+    font-family: 'Poppins-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #A6A0BB;
+    white-space: pre-wrap;
+}
+
+.row-title {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.buttons-container {
+    position: absolute;
+    bottom: 40px;
+}

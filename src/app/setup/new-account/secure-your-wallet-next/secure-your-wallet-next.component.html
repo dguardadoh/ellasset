@@ -1,0 +1,32 @@
+<ion-content class="ion-padding-horizontal">
+  <ion-row class="ion-padding-vertical">
+    <ion-back-button text=" " defaultHref="" (click)="back()"></ion-back-button> <span class="title">{{'secure-your-wallet-next.secureYourWallet' | translate}}</span>
+  </ion-row>
+  <ion-row class="ion-justify-content-center ion-padding">
+    <span class="subtitle">{{'secure-your-wallet-next.secureYourWallets' | translate}} "<span class="blue">{{'secure-your-wallet-next.seedPhrase' | translate}}</span>"</span>
+  </ion-row>
+  <ion-row  class="ion-justify-content-center">
+    <ion-icon name="information-circle-outline"></ion-icon><span (click)="whyIsItImportant()" class="important">{{'secure-your-wallet-next.whyisItImportant' | translate}}</span>
+  </ion-row>
+
+  <ion-row class="ion-padding ion-margin-vertical container">
+    <ion-row class="ion-justify-content-between full-w ion-margin-bottom">
+      <span class="row-title-left">{{'secure-your-wallet-next.manual' | translate }}</span> <span class="row-title-right">{{'secure-your-wallet-next.securityLevel' | translate }} <span class="green">{{'secure-your-wallet-next.veryStrong' | translate }}</span></span>
+    </ion-row>
+    <span class="regular-text">{{'secure-your-wallet-next.text3' | translate }}</span>
+    <span class="regular-text">{{'secure-your-wallet-next.text4' | translate }}</span>
+  </ion-row>
+
+  <ion-row class="ion-padding ion-margin-vertical container">
+    <span class="row-title">{{'secure-your-wallet-next.otherOptions' | translate }}</span>
+    <span class="regular-text">{{'secure-your-wallet-next.tips' | translate }}</span>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center buttons-container full-w">
+    <ion-button  expand="block" shape="round" class="btn-base ion-margin-top color-gradient-button" (click)="gotIt()">
+    {{'secure-your-wallet-next.iGotIt' | translate}}
+  </ion-button>
+  </ion-row>
+  
+
+</ion-content>

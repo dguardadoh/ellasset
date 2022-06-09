@@ -1,0 +1,55 @@
+<ion-row class="block-container ion-margin-horizontal" *ngIf="!show"  >
+  <span class="title">{{'new-wallet.tapToRevealYourSeedPhrase' | translate }}</span>
+  <span class="subtitle">{{'new-wallet.makeSureNoOneIsWatchingYourScreen' | translate }}</span>
+  <ion-button (click)="showHide()"
+    expand="block"
+    shape="round"
+    class="btn-base color-gradient-text">
+    <ion-icon src="/assets/images/open-eye.svg" name="eye-outline" class="color-gradient-icon"></ion-icon><span
+      class="color-gradient-text btn-base-text">{{'new-wallet.view' | translate}}</span>
+  </ion-button>
+</ion-row>
+<ion-row class="ion-margin-horizontal" [ngClass]="{'block': !show }">
+  <ion-col size="4">
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">1.</span><span class="text word">then</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">4.</span><span class="text word">ride</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">7.</span><span class="text word">alien</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">10.</span><span class="text word">exist</span>
+    </ion-row>
+  </ion-col>
+  <ion-col size="4">
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">2.</span><span class="text word">vacant</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">5.</span><span class="text word">avoid</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">8.</span><span class="text word">cross</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">11.</span><span class="text word">comic</span>
+    </ion-row>
+  </ion-col>
+  <ion-col size="4">
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">3.</span><span class="text word">hub</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">6.</span><span class="text word">girl</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">9.</span><span class="text word">usage</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center word-container">
+      <span class="text number">12.</span><span class="text word">upon</span>
+    </ion-row>
+  </ion-col>
+</ion-row>

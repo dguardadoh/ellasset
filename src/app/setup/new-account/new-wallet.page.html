@@ -1,0 +1,84 @@
+<ion-content>
+  <app-stepper #stepper (selectIndexChange)="selectChange($event)">
+    <app-step >
+      <ion-row class="ion-padding ion-justify-content-center">
+        <span class="title">{{'new-wallet.createPassword' | translate}}</span>
+        <p class="subtitle ion-padding-horizontal">{{'new-wallet.passwordDescription' | translate}}</p>
+      </ion-row>
+      <br>
+      <br>
+      <br>
+      <form [formGroup]="loginForm">  
+        <ion-item class="ion-padding custom-item-input ion-align-items-center" lines="none" (click)="$event.stopPropagation() "
+          detail="false">
+          <div class="label-input">
+            <ion-label position="floating">{{'general.newPassword' | translate}}</ion-label>
+            <ion-input formControlName="newPassword" type="text" class="ion-text-wrap" [ngClass]="{'showNewPassword': showNewPassword}"></ion-input>
+          </div>
+          <ion-icon slot="end" [name]="!showNewPassword ? 'eye-off-outline' : 'eye-outline'" (click)="showHideNewPassword()"></ion-icon>
+          <div slot="error" class="error" *ngIf="!loginForm.controls.newPassword.valid && (loginForm.controls.newPassword?.touched || loginForm.controls.newPassword?.dirty)">
+            <p class="ion-no-margin"  *ngIf="loginForm.controls.newPassword.errors?.required">{{'errors.required' | translate}}</p>
+            <p class="ion-no-margin"  *ngIf="loginForm.controls.newPassword.errors?.passwordNoWhitespaces">{{'errors.passwordNoWhitespaces' | translate}}</p>
+            <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.passwordUppercaseCharacter">{{'errors.passwordUppercaseCharacter' | translate}}</p>
+            <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.passwordLowercaseCharacter">{{'errors.passwordLowercaseCharacter' | translate}}</p>
+            <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.passwordOneDigit">{{'errors.passwordOneDigit' | translate}}</p>
+            <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.passwordOneSpecialSymbol">{{'errors.passwordOneSpecialSymbol' | translate}}</p>
+            <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.password10_16CharactersLong">{{'errors.password10_16CharactersLong' | translate}}</p>
+          </div>
+        </ion-item>
+    
+        <ion-item class="ion-padding custom-item-input ion-align-items-center" lines="none"  
+          detail="false" >
+          <div class="label-input">
+            <ion-label position="floating">{{'general.confirmPassword' | translate}}</ion-label>
+            <ion-input formControlName="confirmPassword" type="text" class="ion-text-wrap" [ngClass]="{'showConfirmPassword': showConfirmPassword}"></ion-input>
+          </div>
+          <ion-icon slot="end" [name]="!showConfirmPassword ? 'eye-off-outline' : 'eye-outline'" (click)="showHideConfirmPassword()"></ion-icon>
+          <div slot="error" class="error" *ngIf="loginForm.errors?.passwordsDoNotMatch || ( loginForm.controls.confirmPassword.invalid && (loginForm.controls.confirmPassword?.touched || loginForm.controls.confirmPassword?.dirty))" >
+            <p class="ion-no-margin"  *ngIf="loginForm.controls.confirmPassword.errors?.required">{{'errors.required' | translate}}</p>
+            <p class="ion-no-margin"  *ngIf="loginForm.controls.confirmPassword.errors?.passwordsDoNotMatch">{{'errors.passwordsDoNotMatch' | translate}}</p>
+          </div>
+        </ion-item>
+      </form>
+    
+        <ion-row class="ion-padding sign-in-faceid-container ion-no-border ion-justify-content-between ion-align-items-center" >
+          <ion-label class="sign-in-faceid-text">{{'general.signInWithFaceId' | translate}}</ion-label>
+          <ion-toggle ></ion-toggle>
+        </ion-row>
+        <ion-row class="ion-padding ion-align-items-center">
+          <ion-col size="1">
+             <ion-checkbox  mode="md"></ion-checkbox>
+          </ion-col>
+         <ion-col size="11">
+            <p class=" terms-conditions ion-no-margin" >{{'new-wallet.notRecoverPassword' | translate}} <span class="terms-conditions terms-conditions-blue">{{'new-wallet.learnMore' | translate}}</span></p>
+         </ion-col>
+        </ion-row>
+      
+      <ion-row class="button-container ion-justify-content-center">
+        <ion-button  expand="block" shape="round" class="btn-base ion-margin-top color-gradient-button" [disabled]="loginForm.invalid" (click)="next()">
+          {{'new-wallet.next' | translate}}
+        </ion-button>
+      </ion-row>
+    </app-step>
+    <app-step>
+      <ion-row class="ion-padding ion-justify-content-center">
+        <span class="title" >{{'new-wallet.writeDownYourSeedPhrase' | translate}}</span>
+      </ion-row>
+      <ion-row class="ion-padding ion-justify-content-center">
+        <p class="subtitle ion-padding-horizontal">{{'new-wallet.writeDownYourSeedPhraseText' | translate}}</p>
+      </ion-row>
+      <app-seed-phrase (showSeedPhrase)="continueStep2 = $event"></app-seed-phrase>
+      <ion-row class="button-container step-2 ion-justify-content-center">
+        <ion-button  expand="block" shape="round" class="btn-base ion-margin-top color-gradient-button" [disabled]="!continueStep2"  stepperNext>
+          {{'new-wallet.continue' | translate}}
+        </ion-button>
+      </ion-row>
+    </app-step>
+    <app-step>
+      <ion-row class="ion-padding ion-justify-content-center">
+        <span class="title" *ngIf="!confirmPasswordDone">{{'new-wallet.confirmSeedPhrase' | translate}}</span>
+      </ion-row>
+      <app-confirm-seed-phrase (confirmPasswordDone)="confirmPasswordDone = $event"></app-confirm-seed-phrase>
+    </app-step>
+  </app-stepper>
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'import-from-seed.title' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="loginForm">
+    <ion-item class="ion-padding custom-item-input ion-align-items-center" lines="none" (click)="$event.stopPropagation() "
+      detail="false" >
+      <div class="label-input">
+        <ion-label position="floating">{{'import-from-seed.seedPhrase' | translate}}</ion-label>
+        <ion-textarea formControlName="seedPhrase" type="text" class="ion-text-wrap" [ngClass]="{'showPassPhrase': showPassPhrase}" autoGrow="true"
+          (ionChange)="seedPhraseChangeChars($event)"></ion-textarea>
+      </div>
+      <ion-icon slot="end" name="scan-outline" (click)="$event.stopImmediatePropagation()"></ion-icon>
+      <ion-icon slot="end" [name]="!showPassPhrase ? 'eye-off-outline' : 'eye-outline'" (click)="showHidePassPhrase()"></ion-icon>
+      <div slot="error" class="error" *ngIf="!loginForm.controls.seedPhrase.valid && (loginForm.controls.seedPhrase?.touched || loginForm.controls.seedPhrase?.dirty)">
+        <p class="ion-no-margin"  *ngIf="loginForm.controls.seedPhrase.errors?.required">{{'errors.required' | translate}}</p>
+        <p class="ion-no-margin" *ngIf="loginForm.controls.seedPhrase.errors?.only12Words">{{'errors.only12Words' | translate}}</p>
+        <p class="ion-no-margin" *ngIf="loginForm.controls.seedPhrase.errors?.pattern">{{'errors.onlyLowercaseWords' | translate}}</p>
+      </div>
+    </ion-item>
+
+    <ion-item class="ion-padding custom-item-input ion-align-items-center" lines="none" (click)="$event.stopPropagation() "
+      detail="false">
+      <div class="label-input">
+        <ion-label position="floating">{{'general.newPassword' | translate}}</ion-label>
+        <ion-input formControlName="newPassword" type="text" class="ion-text-wrap" [ngClass]="{'showNewPassword': showNewPassword}"></ion-input>
+      </div>
+      <ion-icon slot="end" [name]="!showNewPassword ? 'eye-off-outline' : 'eye-outline'" (click)="showHideNewPassword()"></ion-icon>
+      <div slot="error" class="error" *ngIf="!loginForm.controls.newPassword.valid && (loginForm.controls.newPassword?.touched || loginForm.controls.newPassword?.dirty)">
+        <p class="ion-no-margin"  *ngIf="loginForm.controls.newPassword.errors?.required">{{'errors.required' | translate}}</p>
+        <p class="ion-no-margin"  *ngIf="loginForm.controls.newPassword.errors?.passwordNoWhitespaces">{{'errors.passwordNoWhitespaces' | translate}}</p>
+        <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.passwordUppercaseCharacter">{{'errors.passwordUppercaseCharacter' | translate}}</p>
+        <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.passwordLowercaseCharacter">{{'errors.passwordLowercaseCharacter' | translate}}</p>
+        <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.passwordOneDigit">{{'errors.passwordOneDigit' | translate}}</p>
+        <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.passwordOneSpecialSymbol">{{'errors.passwordOneSpecialSymbol' | translate}}</p>
+        <p class="ion-no-margin" *ngIf="loginForm.controls.newPassword.errors?.password10_16CharactersLong">{{'errors.password10_16CharactersLong' | translate}}</p>
+      </div>
+    </ion-item>
+
+    <ion-item class="ion-padding custom-item-input ion-align-items-center" lines="none"  
+      detail="false" >
+      <div class="label-input">
+        <ion-label position="floating">{{'general.confirmPassword' | translate}}</ion-label>
+        <ion-input formControlName="confirmPassword" type="text" class="ion-text-wrap" [ngClass]="{'showConfirmPassword': showConfirmPassword}"></ion-input>
+      </div>
+      <ion-icon slot="end" [name]="!showConfirmPassword ? 'eye-off-outline' : 'eye-outline'" (click)="showHideConfirmPassword()"></ion-icon>
+      <div slot="error" class="error" *ngIf="loginForm.errors?.passwordsDoNotMatch || ( loginForm.controls.confirmPassword.invalid && (loginForm.controls.confirmPassword?.touched || loginForm.controls.confirmPassword?.dirty))" >
+        <p class="ion-no-margin"  *ngIf="loginForm.controls.confirmPassword.errors?.required">{{'errors.required' | translate}}</p>
+        <p class="ion-no-margin"  *ngIf="loginForm.controls.confirmPassword.errors?.passwordsDoNotMatch">{{'errors.passwordsDoNotMatch' | translate}}</p>
+      </div>
+    </ion-item>
+  </form>
+
+    <ion-row class="ion-padding sign-in-faceid-container ion-no-border ion-justify-content-between ion-align-items-center" >
+      <ion-label class="sign-in-faceid-text">{{'general.signInWithFaceId' | translate}}</ion-label>
+      <ion-toggle ></ion-toggle>
+    </ion-row>
+
+  <span class="ion-margin-start terms-conditions" >{{'import-from-seed.byProceedingYouAgreeToThese' | translate}} </span><span class="ion-margin-end terms-conditions terms-conditions-blue">{{'import-from-seed.termAndConditions' | translate}}</span>
+  <ion-row class="button-container">
+    <ion-button  expand="block" shape="round" class="btn-base ion-margin-top color-gradient-button" [disabled]="loginForm.invalid">
+      {{'import-from-seed.import' | translate}}
+    </ion-button>
+  </ion-row>
+</ion-content>

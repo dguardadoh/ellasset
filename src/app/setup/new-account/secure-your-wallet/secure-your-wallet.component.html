@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-row class="ion-justify-content-center ion-padding">
+    <span class="title">{{'secure-your-wallet.secureYourWallet' | translate}}</span>
+  </ion-row>
+  <br>
+  <div class="image" ></div>
+  <ion-row class="ion-padding-horizontal text">
+    {{'secure-your-wallet.text1-start' | translate}} <span class="blue" (click)="goToSeedPhrase()">{{'secure-your-wallet.seedPhrase' | translate}}</span> {{'secure-your-wallet.text1-end' | translate}}
+  </ion-row>
+  <ion-row class="ion-padding-horizontal text">
+    {{'secure-your-wallet.text2' | translate}}
+  </ion-row>
+  <ion-row class="ion-justify-content-center buttons-container">
+    <span (click)="goToRemindMeLater()" class="color-gradient-text ion-margin-bottom">{{'secure-your-wallet.remindMeLater' | translate}}</span>
+    <ion-button  expand="block" shape="round" class="btn-base ion-margin-top color-gradient-button" (click)="next()">
+      {{'secure-your-wallet.next' | translate}}
+    </ion-button>
+  </ion-row>
+</ion-content>

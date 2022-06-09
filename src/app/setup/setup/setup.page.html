@@ -1,0 +1,16 @@
+<ion-content>
+  <img src="/assets/images/wallet-set-up.svg">
+  <div class="title-container">
+    <span class="title">ELLAsset</span>
+  </div> 
+
+  <div class="footer-container">
+    <ion-button (click)="goToImportFromSeed()"  expand="block" shape="round" class="btn-base color-gradient-text seed-phrase">
+      <span class="color-gradient-text btn-base-text">{{'setup.importUsingSeedPhrase' | translate}}</span>
+    </ion-button>
+    <ion-button  (click)="goToNewAccount()" expand="block" shape="round" class="btn-base color-gradient-button ion-margin-top">
+      {{'setup.createANewWallet' | translate}}
+    </ion-button>
+  </div>
+
+</ion-content>

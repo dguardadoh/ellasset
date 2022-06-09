@@ -24,3 +24,123 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Fonts */
+@font-face {
+    font-family: Barlow;
+    src: url(./assets/fonts/Barlow-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url(./assets/fonts/Poppins-Semibold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(./assets/fonts/Poppins-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(./assets/fonts/Poppins-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Password;
+    src: url(./assets/fonts/Password.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+ion-content {
+    --background: var(--background-content);
+}
+
+ion-modal.modal-card ion-content , ion-modal ion-content {
+    --background: var(--background-modal-card-content);
+}
+ion-modal.modal-card ion-header ion-toolbar {
+    --background: var(--background-modal-card-content);
+}
+
+ion-modal.modal-card ion-header ion-toolbar ion-title{
+    font-family: var(--font-family-modal-card-title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    --color: #FFFFFF;
+}
+
+ion-modal.modal-2::part(backdrop) {
+    background-color: rgb(135, 135, 135);
+    filter: blur(1px);
+}
+
+.btn-base {
+    width: 279px;
+    height: 48px;
+    --font-family: var(--font-family-button);
+    --font-style: normal;
+    --font-weight: 700;
+    --font-size: 16px;
+    font-family: var(--font-family-button);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    --background-activated: var(--background-button-activated);
+}
+
+.btn-base-text {
+    font-family: var(--font-family-button);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.button-disabled {
+    --background: #2F2A3C !important;
+    --color: var(--background-item) !important;
+}
+
+.color-gradient {
+    background: var(--color-gradient);
+    &-button {
+        --background: var(--color-gradient);
+        --color: #ffff;
+    }
+}
+
+.color-gradient-text {
+    background: var(--color-gradient);
+    --background: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.color-gradient-icon {
+    color: var(--color-gradient);
+    --color: var(--color-gradient);
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+.blue {
+    color: #0B6FFB;
+    display: contents;
+}

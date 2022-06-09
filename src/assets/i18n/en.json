@@ -1,0 +1,93 @@
+{
+    "general": {
+        "minCharacters": "Must be at least {{count}} characters",
+        "newPassword": "New Password",
+        "confirmPassword": "Confirm Password",
+        "signInWithFaceId": "Sign in with Face ID?"
+    },
+    "errors": {
+        "required": "Required",
+        "only12Words": "Must enter 12 words.",
+        "onlyLowercaseWords": "Only lowecase words.",
+        "passwordNoWhitespaces": "Password must not contain Whitespaces.",
+        "passwordUppercaseCharacter":"Password must have at least one Uppercase Character.",
+        "passwordLowercaseCharacter": "Password must have at least one Lowercase Character.",
+        "passwordOneDigit": "Password must contain at least one Digit.",
+        "passwordOneSpecialSymbol": "Password must contain at least one Special Symbol.",
+        "password10_16CharactersLong": "Password must be 10-16 Characters Long.",
+        "passwordsDoNotMatch": "Your passwords do not match."
+    },
+    "setup" : {
+        "importUsingSeedPhrase": "Import Using Seed Phrase",
+        "createANewWallet": "Create a New Wallet"
+    },
+    "import-from-seed": {
+        "title": "Import From Seed",
+        "seedPhrase": "Seed Phrase",
+        "byProceedingYouAgreeToThese": "Byproceeding, you agree to these",
+        "termAndConditions": "Term and Conditions.",
+        "import": "Import"
+    },
+    "new-wallet": {
+        "createPassword": "Create Password",
+        "passwordDescription": "This password will unlock your ELLAsset wallet only on this service",
+        "notRecoverPassword": "I understand that ELLAsset cannot recover this password for me.",
+        "learnMore": "Learn more",
+        "next": "Next",
+        "previous": "Previous",
+        "writeDownYourSeedPhrase": "Write Down Your Seed Phrase",
+        "writeDownYourSeedPhraseText":"This is your seed phrase. Write it down on a paper and keep it in a safe place. You'll be asked to re-enter this phrase (in order) on the next step.",
+        "tapToRevealYourSeedPhrase": "Tap to reveal your seed phrase",
+        "makeSureNoOneIsWatchingYourScreen": "Make sure no one is watching your screen.",
+        "view": "View",
+        "continue": "Continue",
+        "confirmSeedPhrase": "Confirm Seed Phrase",
+        "selectEachWord": "Select each word in the order it was presented to you",
+        "congratulations": "Congratulations",
+        "congratulationsText1": "You've successfully protected your wallet. Remember to keep your seed phrase safe, it's your responsibility!",
+        "congratulationsText2": "ELLAsset cannot recover your wallet should you lose it. You can find your seedphrase in Setings > Security & Privacy",
+        "done": "Done"
+    },
+    "secure-your-wallet": {
+        "secureYourWallet": "Secure Your Wallet",
+        "text1-start":"Don't risk losing your funds. protect your wallet by saving your",
+        "seedPhrase":"Seed Phrase",
+        "text1-end":"in a place you trust.",
+        "text2":"It's the only way to recover your wallet if you get locked out of the app or get a new device.",
+        "remindMeLater":"Remind Me Later",
+        "next": "Next"
+    },
+    "seed-phrase": {
+        "whatIsASeedPhrase": "What is a \"Seed Phrase\"",
+        "text1": "A seed phrase is a set of twelve words that contains all the information about your wallet, including your funds. It's like a secret code used to access your entire wallet.",
+        "text2": "You must keep your seed phrase secret and safe. If someone gets your seed phrase, they'll gain control over your accounts.",
+        "text3": "Save it in a place where only you can access it. If you lose it, not even MetaMask can help you recover it.",
+        "understood": "Understood"
+    },
+    "remind-me-later": {
+        "skipAccountSecurity": "Skip Account Security?",
+        "consent": "I dunderstand that if i lose mt seed phrase i will not be able to access my wallet",
+        "secureNow": "Secure Now",
+        "skip": "Skip"
+    },
+    "secure-your-wallet-next": {
+        "secureYourWallet": "Secure Your Wallet",
+        "secureYourWallets": "Secure your wallet's",
+        "seedPhrase":"Seed Phrase",
+        "whyisItImportant": "Why is it important?",
+        "manual": "Manual",
+        "securityLevel": "Security Level:",
+        "veryStrong": "Very Strong",
+        "text3": "Write down your seed phrase on a piece of paper and store in a safe place.",
+        "text4": "Risks are:  \n• You lose it\n• You forget where you put it\n• Someone else finds it",
+        "otherOptions": "Other options: Doesn't have to be paper!",
+        "tips": "Tips: \n• Store in bank vault  \n• Store in a safe \n• Store in multiple secret places",
+        "iGotIt": "I Got It"
+    },
+    "why-is-it-important": {
+        "whyIsItImportant": "Why is it important?",
+        "text1": "Dont’t risk losing your funds. Protect your wallet by saving your seed phrase in a place you trust.",
+        "text2": "It’s the only way to recover your wallet if you get locked out of the app or get a new device.",
+        "iGotIt": "I Got It"
+    }
+}

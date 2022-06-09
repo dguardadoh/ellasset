@@ -1,0 +1,102 @@
+.selection-word-container {
+    background: #131118;
+    border-radius: 8px;
+}
+
+.container-text {
+    font-family: 'Poppins-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #A6A0BB;
+}
+
+.word-container {
+    background: #1C1924;
+    border-radius: 8px;
+    padding: 8px 16px;
+    min-width: 85px;
+}
+
+.word-container-text {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    &-number {
+        color: #A6A0BB;
+    }
+}
+
+.word-select-container {
+    background: #1C1924;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-left: 24px;
+    &:first-of-type {
+        margin-left: 0px;
+    }
+}
+
+.word-select-text {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    &-disabled {
+        color: #2F2A3C;
+    }
+}
+
+.button-container {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+
+.congrats-container {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+}
+
+.congrats-title {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.congrats-text {
+    font-family: 'Poppins-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #A6A0BB;
+}
+
+.congrats-parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

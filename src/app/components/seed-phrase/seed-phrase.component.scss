@@ -1,0 +1,71 @@
+.text {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;    
+}
+
+.number {
+    color: #A6A0BB;
+}
+
+.word {
+    color: #ffffff;
+}
+
+.word-container {
+    background: var(--background-item);
+    padding: 8px 6px;
+    border-radius: 8px;
+    margin: 12px 12px;
+}
+
+.block {
+    background: rgba(19, 17, 24, 0.9);
+    border-radius: 8px;
+    filter: blur(5px);
+}
+
+.block-container {
+    position: absolute;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    height: 27%;
+}
+
+ion-button {
+    width: 154px;
+    height: 48px;
+    --background: var(--background-item);
+    margin-top: -27%;
+}
+
+.title {
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    margin-top: 10%;
+}
+
+.subtitle {
+    font-family: 'Poppins-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #A6A0BB;
+    margin-top: -25%;
+}
+
+ion-icon {
+    font-size: 24px;
+    margin-right: 8px;
+}

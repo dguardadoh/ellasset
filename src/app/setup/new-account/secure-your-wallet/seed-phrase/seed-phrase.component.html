@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-row class="ion-justify-content-center ion-padding-vertical title">
+    <span>{{'seed-phrase.whatIsASeedPhrase' | translate }}</span>
+  </ion-row>
+  <ion-row class="ion-padding-horizontal">
+    <ion-row class="ion-justify-content-center ion-padding text">
+      <span>{{'seed-phrase.text1' | translate }}</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-padding text">
+      <span>{{'seed-phrase.text2' | translate }}</span>
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-padding text">
+      <span>{{'seed-phrase.text3' | translate }}</span>
+    </ion-row>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center ion-padding">
+    <ion-button expand="block" shape="round" class="btn-base ion-margin-top color-gradient-button" (click)="modalCtrl.dismiss()">
+      {{'seed-phrase.understood' | translate}}
+    </ion-button>
+  </ion-row>
+
+</ion-content>

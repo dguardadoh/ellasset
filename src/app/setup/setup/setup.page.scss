@@ -1,0 +1,42 @@
+.title {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 68px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
+}
+
+img {
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+}
+
+.title-container {
+    height: 61vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container {
+    height: 39vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+}
+
+.seed-phrase {
+    --background: var(--background-item);
+}
